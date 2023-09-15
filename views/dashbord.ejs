@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashbord</title>
+</head>
+<style>
+    nav{
+        background: #263547;  /* fallback for old browsers */
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        border-radius: 1rem;
+    }
+    nav button{
+        
+        margin-left: 80%;
+        width:20%;
+        height: 3rem;
+        font-size: 2rem;
+        border-radius: 1rem;
+    }
+    .div-left{
+        float : left ;
+        background-color: aqua;
+        width: 35%;
+        height: 100vh;
+        border-radius: 1rem;
+    }
+    .profilepic{
+        width: 40%;
+        height: 30vh;
+        border: 0.5rem solid black;
+        border-radius: 1rem;
+        margin: 1rem;
+    }
+    .profiletext{
+        margin-left: 1rem;
+    }
+
+</style>
+<body>
+<hr>
+<nav class="logout">
+   
+    <form method="get" action="/logout" >
+        <button>logout</button>
+    </form>
+</nav>
+<hr>
+
+<div class="div-left">
+    <div class="profilepic">
+        <img src="" alt="">
+    </div>
+    <div class="profiletext">
+        <h2> <%= name %> </h2>
+        <h2> <%= email %>  </h2>
+        <h2> <%= number %>  </h2>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adashbord</title>
+    <style>
+        .data li {
+            float: left;
+            margin-left: 3rem;
+        }
+        .table{
+            border: 1rem solid rgb(99, 99, 99);
+            
+        }
+        .table {
+            border-collapse: collapse;
+            width: 85%;
+            margin-left: 7%;
+
+        }
+        tr:nth-child(even) {
+        background-color: #dddddd;
+        
+        }
+        tr:nth-child(odd) {
+        background-color: #ffffff;
+        }
+        td, th {
+        border: 1px  solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        text-align: center;
+        }
+        td img {
+            width: 2rem;
+            cursor: pointer;
+        }
+        h1{
+            text-transform: uppercase ;
+            text-align: center;
+            color: #ff0000;
+
+        }
+    </style>
+</head>
+<body>
+    <h1 >admin dashbord</h1>
+    
+
+<!--     
+        <ul class="data" >
+            <% data.map(user=>{ %>
+                <li >  <%= user._id %> </li>
+                <li> <%= user.name %> </li> 
+                <li><%= user.number %> </li>
+                <li><%= user.email %>  </li>
+                <li> " <%= user.password %> " </li>
+                <br>
+                <hr>
+                <% }) %> 
+        </ul>
+    -->
+
+
+    
+        <table  class="table" >
+            <tr>
+                <th></th>
+                <th>id</th>
+                <th>Name</th>
+                <th>Number</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th></th>
+                
+                
+            </tr>
+            
+            
+            <% data.map(user=>{ %>
+            <tr id="ele">   
+            <form action="/admin/edit"  method="post">
+            <td> <input type="hidden" name="userId" value="<%= user._id %>"></td>
+            <td><%= user._id %></td>
+            <td><%= user.name %></td>
+            <td><%= user.number %></td>
+            <td><%= user.email %> </td>
+            <td>" <%= user.password %> "</td>
+            <td>
+            <button ><img src="https://i.pinimg.com/474x/7c/ab/00/7cab00a8e35fe598b8dc3fe0dbafdfc5.jpg" alt=""  > </button>
+            </form>
+            </td>
+
+            <% }) %> 
+            
+
+        </table>
+
+
+    <script>
+      
+    </script>
+</body>
+</html>

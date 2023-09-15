@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin panal</title>
+</head>
+<style>
+    body{
+        background-color: rgb(255, 255, 255);
+    }
+.div{
+    width: 20rem;
+	height: 20rem;
+	overflow: hidden;
+	border-radius: 0.6rem;
+	box-shadow: 0.3rem 1.2rem 4rem rgba(0, 0, 0, 0.623);
+    margin-top: 6rem;
+	color: #ffffff10;
+	backdrop-filter: blur(15px);
+    overflow: visible;
+    
+}
+.div input{
+    width: 104%;
+    height: 2rem;
+    margin-top: 5rem;
+    text-align: center;
+    color: #000;
+    border-radius: 0.4rem;
+    border:0.1rem solid black;
+    margin-left: -3%;
+}
+.div button{
+    margin-left: 35%;
+    width: 30%;
+    height: 1.9rem;
+    border:0.1rem solid black;
+}
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text1{
+    text-align: center;
+    font-size: 4rem;
+}
+.text{
+    text-align: center;
+}
+</style>
+<body>
+    <h1 class="text1">Admin Panel</h1>
+<section>    
+    <div class="div">
+    <form action="/admin/data" method="post">
+    <input type="password" name="password" placeholder="password" ><br><br><br>
+    <button type="submit">submit</button>
+    </form>
+    </div>
+</section>
+<h2 class="text" >only for Admin</h2>
+</body>
+</html>

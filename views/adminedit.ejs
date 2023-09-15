@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin editer</title>
+</head>
+<style>
+.data{
+    width: 25rem;
+	height: 35rem;
+	border-radius: 0.6rem;
+	box-shadow: 0.3rem 1.2rem 4rem rgba(0, 0, 0, 0.623);
+    color: #000;
+	background-color: #ffffff10;
+	backdrop-filter: blur(15px);
+    overflow: visible;
+}
+.data label{
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+.data input{
+    width: 104%;
+    height: 2rem;
+    font-size: large;
+    text-align: center;
+    color: #000;
+    border-radius: 0.4rem;
+    border:0.1rem solid black;
+    margin-left: -3%;
+}
+.data button{
+    margin-left: 35%;
+    width: 30%;
+    height: 1.9rem;
+    border:0.1rem solid black;
+    text-align: center;
+}
+.bigdiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text{
+    font-size: 3rem ;
+    text-align: center;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+#dbutton{
+    height: 3rem;
+    width: 20%;
+    margin-left: 40%;
+    
+}
+.dh1{
+    text-align: center;
+    color: #ff0000;
+    margin-bottom: 0;
+}
+#div-2{
+    visibility: hidden;
+    margin-top: -8rem;
+}
+</style>
+<body>
+     <h1 class="text">Edit Details </h1>
+    <div class="bigdiv">
+        <div class="data">
+            <form action="/admin/editone" method="post">       
+                <input type="hidden" name="id"value="<%= user[0]._id %>" ><br>
+                <label>Name: </label> <input type="text" name="name" placeholder="User name" value="<%= user[0].name %>" ><br>
+                <label>Number: </label><input type="number" name="number" placeholder="PHone number" value="<%= user[0].number %>" ><br>
+                <label>Email: </label><input type="email" name="email" placeholder="Email"  value="<%= user[0].email %>"><br>
+                <label>password: </label><input type="text" name="password" placeholder="Password" value="<%= user[0].password %>" > <br><br>
+                <button type="submit">Update the data</button>
+            </form>
+            <br><hr><hr>
+            <div id="div-1">
+            <h1 class="dh1" > TO Delete The User</h1><br><br>
+            <button id="dbutton" onclick="delete1()" ><img src="https://i.pinimg.com/474x/67/88/12/67881254d58dfaf7057eaf37d55e910f.jpg" alt=""></button>
+            </div>
+            <div id="div-2">
+            <form action="/admin/delete" method="post">
+                <h1 class="dh1" >Please Confirm you Delete</h1><br><br>
+                <input type="hidden" name="userId" value="<%= user[0]._id %>">
+                <button id="dbutton" type="submit">Delete</button>
+            </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function delete1(){
+            document.getElementById("div-1").style.visibility="hidden";
+            document.getElementById("div-2").style.visibility="visible";
+        }
+    </script>
+</body>
+</html>
