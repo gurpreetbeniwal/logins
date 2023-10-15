@@ -15,8 +15,9 @@ body{
 	min-height: 100vh;
 	font-family: 'Jost', sans-serif;
 	/* background: linear-gradient(to top, #000000,  #bbbbbbf5); */
-	background-image: url(https://i.pinimg.com/564x/bf/bb/70/bfbb700958aa7c3a1c2b143f97b66c3a.jpg);
-	background-size: cover ;
+/* 	background-image: url(https://i.pinimg.com/564x/bf/bb/70/bfbb700958aa7c3a1c2b143f97b66c3a.jpg);
+	background-size: cover ; */
+	background-color: rgba(249, 205, 213, 0.758);
 	
 
 }
